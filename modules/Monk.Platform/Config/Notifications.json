@@ -1,0 +1,32 @@
+{
+  "DefaultProvider": "Console",
+
+  "Providers": {
+
+    "Console": {
+      "Enabled": true
+    },
+
+    "Discord": {
+      "Enabled": false,
+      "Webhook": ""
+    },
+
+    "Slack": {
+      "Enabled": false,
+      "Webhook": ""
+    },
+
+    "Teams": {
+      "Enabled": false,
+      "Webhook": ""
+    },
+
+    "Email": {
+      "Enabled": false,
+      "SMTP": "",
+      "From": "",
+      "To": ""
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "Thresholds": {
+    "CPU": 90,
+    "Memory": 90,
+    "Disk": 90
+  },
+
+  "Monitoring": {
+    "RefreshSeconds": 5
+  },
+
+  "Backup": {
+    "RetentionDays": 30,
+    "Compression": false
+  },
+
+  "Logging": {
+    "Level": "INFO"
+  },
+
+  "Docker": {
+    "ComposeFile": "docker-compose.yml"
+  }
+}

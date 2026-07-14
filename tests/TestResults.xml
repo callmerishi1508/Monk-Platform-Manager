@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="27" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2026-07-14" time="22:23:47">
+  <environment user-domain="RISHI" platform="Microsoft Windows 11 Home Single Language|C:\WINDOWS|\Device\Harddisk0\Partition3" clr-version="10.0.9" user="admin" cwd="C:\AI-Platform\Monk-Platform-Manager" nunit-version="2.5.8.0" os-version="10.0.26200" machine-name="RISHI" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="73.8943" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Backup.Tests.ps1" executed="True" result="Success" success="True" time="4.2393" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Backup.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Backup Integration" executed="True" result="Success" success="True" time="2.2973" asserts="0" description="Backup Integration">
+            <results>
+              <test-case description="Creates backup successfully" name="Backup Integration.Creates backup successfully" time="1.967" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\EventBus.Tests.ps1" executed="True" result="Success" success="True" time="4.7556" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\EventBus.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Event Bus" executed="True" result="Success" success="True" time="1.0289" asserts="0" description="Event Bus">
+            <results>
+              <test-case description="Publishes events without throwing" name="Event Bus.Publishes events without throwing" time="0.9971" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Platform.Tests.ps1" executed="True" result="Success" success="True" time="28.9477" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Platform.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Platform Integration" executed="True" result="Success" success="True" time="22.8293" asserts="0" description="Platform Integration">
+            <results>
+              <test-case description="Starts platform successfully" name="Platform Integration.Starts platform successfully" time="16.7904" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Returns healthy status" name="Platform Integration.Returns healthy status" time="5.9694" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\PluginSystem.Tests.ps1" executed="True" result="Success" success="True" time="0.8032" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\PluginSystem.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Plugin Integration" executed="True" result="Success" success="True" time="0.1396" asserts="0" description="Plugin Integration">
+            <results>
+              <test-case description="Loads demo plugin" name="Plugin Integration.Loads demo plugin" time="0.1049" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Scheduler.Tests.ps1" executed="True" result="Success" success="True" time="0.8504" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Scheduler.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Scheduler Integration" executed="True" result="Success" success="True" time="0.1588" asserts="0" description="Scheduler Integration">
+            <results>
+              <test-case description="Scheduler commands exist" name="Scheduler Integration.Scheduler commands exist" time="0.0585" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Backup.Tests.ps1" executed="True" result="Success" success="True" time="2.9186" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Backup.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Backup Engine" executed="True" result="Success" success="True" time="0.2794" asserts="0" description="Backup Engine">
+            <results>
+              <test-case description="Lists backups" name="Backup Engine.Lists backups" time="0.1554" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Backup command exists" name="Backup Engine.Backup command exists" time="0.0706" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Config.Tests.ps1" executed="True" result="Success" success="True" time="2.9303" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Config.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Configuration" executed="True" result="Success" success="True" time="0.3135" asserts="0" description="Configuration">
+            <results>
+              <test-case description="Returns configuration object" name="Configuration.Returns configuration object" time="0.0823" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Configuration has Root" name="Configuration.Configuration has Root" time="0.1245" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Configuration has Logs folder" name="Configuration.Configuration has Logs folder" time="0.0773" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Health.Tests.ps1" executed="True" result="Success" success="True" time="14.0408" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Health.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Health Engine" executed="True" result="Success" success="True" time="11.569" asserts="0" description="Health Engine">
+            <results>
+              <test-case description="Returns health object" name="Health Engine.Returns health object" time="4.2904" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Returns system health" name="Health Engine.Returns system health" time="4.8581" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CPU property exists" name="Health Engine.CPU property exists" time="2.3726" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Module.Tests.ps1" executed="True" result="Success" success="True" time="2.7551" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Module.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Module Loading" executed="True" result="Success" success="True" time="0.4726" asserts="0" description="Module Loading">
+            <results>
+              <test-case description="Imports successfully" name="Module Loading.Imports successfully" time="0.0966" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Exports public commands" name="Module Loading.Exports public commands" time="0.0702" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Exports Start-MonkPlatform" name="Module Loading.Exports Start-MonkPlatform" time="0.0778" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Exports Repair-MonkPlatform" name="Module Loading.Exports Repair-MonkPlatform" time="0.0932" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Exports Backup-MonkPlatform" name="Module Loading.Exports Backup-MonkPlatform" time="0.108" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Plugins.Tests.ps1" executed="True" result="Success" success="True" time="2.0975" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Plugins.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Plugin System" executed="True" result="Success" success="True" time="0.1534" asserts="0" description="Plugin System">
+            <results>
+              <test-case description="Returns installed plugins" name="Plugin System.Returns installed plugins" time="0.0904" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Plugin command exists" name="Plugin System.Plugin command exists" time="0.0334" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Repair.Tests.ps1" executed="True" result="Success" success="True" time="3.1791" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Repair.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Repair Engine" executed="True" result="Success" success="True" time="0.1778" asserts="0" description="Repair Engine">
+            <results>
+              <test-case description="Repair function exists" name="Repair Engine.Repair function exists" time="0.0588" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Repair service exists" name="Repair Engine.Repair service exists" time="0.0933" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Services.Tests.ps1" executed="True" result="Success" success="True" time="3.9467" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Services.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Service Registry" executed="True" result="Success" success="True" time="1.0889" asserts="0" description="Service Registry">
+            <results>
+              <test-case description="Returns services" name="Service Registry.Returns services" time="0.1321" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Contains qdrant" name="Service Registry.Contains qdrant" time="0.0622" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Returns running status" name="Service Registry.Returns running status" time="0.8596" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Update.Tests.ps1" executed="True" result="Success" success="True" time="2.363" asserts="0" description="C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Update.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update Engine" executed="True" result="Success" success="True" time="0.0713" asserts="0" description="Update Engine">
+            <results>
+              <test-case description="Update command exists" name="Update Engine.Update command exists" time="0.0411" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

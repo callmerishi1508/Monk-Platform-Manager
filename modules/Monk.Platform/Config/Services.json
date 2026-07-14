@@ -1,0 +1,42 @@
+{
+  "qdrant": {
+    "container": "qdrant",
+    "port": 6333,
+    "dependsOn": []
+  },
+
+  "neo4j": {
+    "container": "ai2ar-neo4j",
+    "port": 7474,
+    "dependsOn": []
+  },
+
+  "postgres": {
+    "container": "ai2ar-postgres",
+    "port": 5432,
+    "dependsOn": []
+  },
+
+  "supabase": {
+    "container": "supabase_db_Supabase",
+    "port": 54322,
+    "dependsOn": [
+      "postgres"
+    ]
+  },
+
+  "langfuse": {
+    "container": "langfuse-langfuse-web-1",
+    "port": 3000,
+    "dependsOn": [
+      "postgres",
+      "redis"
+    ]
+  },
+
+  "redis": {
+    "container": "langfuse-redis-1",
+    "port": 6379,
+    "dependsOn": []
+  }
+}

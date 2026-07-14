@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+
+  push:
+
+jobs:
+
+  lint:
+
+    runs-on: windows-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - shell: pwsh
+        run: |
+          Install-Module PSScriptAnalyzer -Force
+
+      - shell: pwsh
+        run: |
+          Invoke-ScriptAnalyzer `
+            -Path modules `
+            -Recurse

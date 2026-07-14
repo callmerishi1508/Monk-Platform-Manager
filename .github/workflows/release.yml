@@ -1,0 +1,22 @@
+name: Release
+
+on:
+
+  release:
+
+    types: [published]
+
+jobs:
+
+  publish:
+
+    runs-on: windows-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Build Module
+        shell: pwsh
+        run: |
+          Test-ModuleManifest ./modules/Monk.Platform/Monk.Platform.psd1

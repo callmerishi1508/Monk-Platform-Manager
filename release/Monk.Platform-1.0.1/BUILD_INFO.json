@@ -1,0 +1,12 @@
+{
+  "Product": "Monk Platform Manager",
+  "Version": "1.0.1",
+  "Build": 1,
+  "BuildDate": "2026-07-14 22:25:06",
+  "GitCommit": "Unknown",
+  "GitBranch": "master",
+  "PowerShellVersion": "7.6.3",
+  "OS": "Microsoft Windows NT 10.0.26200.0",
+  "User": "admin",
+  "Machine": "RISHI"
+}

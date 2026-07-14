@@ -1,135 +1,203 @@
 $ErrorActionPreference = "Stop"
 
 $buildStart = Get-Date
+$buildLog = $null
+$buildSucceeded = $false
 
-Write-Host ""
-Write-Host "================================================="
-Write-Host "         MONK PLATFORM BUILD SYSTEM"
-Write-Host "================================================="
-Write-Host ""
+try {
 
-#-------------------------------------------------------
-# Read Version
-#-------------------------------------------------------
+    #-------------------------------------------------------
+    # Start Build Logging
+    #-------------------------------------------------------
 
-$version = Get-Content "$PSScriptRoot\version.json" |
-    ConvertFrom-Json
+    $buildLog = Start-MonkReleaseLog
 
-$versionString = "{0}.{1}.{2}" -f `
-    $version.Major,
-    $version.Minor,
-    $version.Patch
+    Write-Host ""
+    Write-Host "================================================="
+    Write-Host "         MONK PLATFORM BUILD SYSTEM"
+    Write-Host "================================================="
+    Write-Host ""
 
-#-------------------------------------------------------
-# Clean
-#-------------------------------------------------------
+    #-------------------------------------------------------
+    # Version Information
+    #-------------------------------------------------------
 
-Write-Host "[1/5] Clean"
+    $version = Get-MonkVersionInfo
 
-& "$PSScriptRoot\clean.ps1"
+    $versionString = "{0}.{1}.{2}" -f `
+        $version.Major,
+        $version.Minor,
+        $version.Patch
 
-#-------------------------------------------------------
-# Manifest
-#-------------------------------------------------------
+    #-------------------------------------------------------
+    # Git Information
+    #-------------------------------------------------------
 
-Write-Host ""
-Write-Host "[2/5] Validate Manifest"
+    $git = Get-MonkGitInfo
 
-Test-ModuleManifest `
-    "$PSScriptRoot\modules\Monk.Platform\Monk.Platform.psd1" |
-Out-Null
+    #-------------------------------------------------------
+    # Clean
+    #-------------------------------------------------------
 
-Write-Host "✓ Manifest"
+    Write-Host "[1/5] Clean"
 
-#-------------------------------------------------------
-# Script Analyzer
-#-------------------------------------------------------
+    & "$PSScriptRoot\clean.ps1"
 
-Write-Host ""
-Write-Host "[3/5] Script Analyzer"
+    #-------------------------------------------------------
+    # Manifest
+    #-------------------------------------------------------
 
-Invoke-ScriptAnalyzer `
-    -Path "$PSScriptRoot\modules" `
-    -Recurse | Out-Null
+    Write-Host ""
+    Write-Host "[2/5] Validate Manifest"
 
-Write-Host "✓ Analyzer"
+    Test-ModuleManifest `
+        "$PSScriptRoot\modules\Monk.Platform\Monk.Platform.psd1" |
+        Out-Null
 
-#-------------------------------------------------------
-# Tests
-#-------------------------------------------------------
+    Write-Host "✓ Manifest"
 
-Write-Host ""
-Write-Host "[4/5] Tests"
+    #-------------------------------------------------------
+    # Script Analyzer
+    #-------------------------------------------------------
 
-& "$PSScriptRoot\tests\Run-Tests.ps1"
+    Write-Host ""
+    Write-Host "[3/5] Script Analyzer"
 
-Write-Host "✓ Tests"
+    Invoke-ScriptAnalyzer `
+        -Path "$PSScriptRoot\modules" `
+        -Recurse |
+        Out-Null
 
-#-------------------------------------------------------
-# Package
-#-------------------------------------------------------
+    Write-Host "✓ Analyzer"
 
-Write-Host ""
-Write-Host "[5/5] Package"
+    #-------------------------------------------------------
+    # Tests
+    #-------------------------------------------------------
 
-& "$PSScriptRoot\package.ps1"
+    Write-Host ""
+    Write-Host "[4/5] Tests"
 
-Write-Host "✓ Package"
+    & "$PSScriptRoot\tests\Run-Tests.ps1"
 
-#-------------------------------------------------------
-# Build Summary
-#-------------------------------------------------------
+    Write-Host "✓ Tests"
 
-$gitCommit = git rev-parse --short HEAD 2>$null
+    #-------------------------------------------------------
+    # Package
+    #-------------------------------------------------------
 
-if (-not $gitCommit) {
-    $gitCommit = "Unknown"
+    Write-Host ""
+    Write-Host "[5/5] Package"
+
+    & "$PSScriptRoot\package.ps1"
+
+    Write-Host "✓ Package"
+
+    #-------------------------------------------------------
+    # Package Information
+    #-------------------------------------------------------
+
+    $zip = Join-Path `
+        "$PSScriptRoot\release" `
+        ("Monk.Platform-{0}.zip" -f $versionString)
+
+    $packageSize = "Unknown"
+
+    if (Test-Path $zip) {
+
+        $packageSize = "{0:N2} MB" -f (
+            (Get-Item $zip).Length / 1MB
+        )
+
+    }
+
+    #-------------------------------------------------------
+    # Summary
+    #-------------------------------------------------------
+
+    $elapsed = (Get-Date) - $buildStart
+
+    Write-Host ""
+    Write-Host "================================================="
+    Write-Host "                BUILD SUMMARY"
+    Write-Host "================================================="
+    Write-Host ""
+
+    Write-Host ("Version      : {0}" -f $versionString)
+    Write-Host ("Build        : {0}" -f $version.Build)
+    Write-Host ("Branch       : {0}" -f $git.Branch)
+    Write-Host ("Commit       : {0}" -f $git.Commit)
+    Write-Host ("PowerShell   : {0}" -f $PSVersionTable.PSVersion)
+    Write-Host ("Platform     : {0}" -f [System.Environment]::OSVersion.VersionString)
+
+    Write-Host ""
+
+    Write-Host ("Package      : Monk.Platform-{0}.zip" -f $versionString)
+    Write-Host ("Package Size : {0}" -f $packageSize)
+
+    Write-Host ""
+
+    Write-Host ("Build Time   : {0:N2} sec" -f $elapsed.TotalSeconds)
+
+    if ($buildLog) {
+
+        Write-Host ""
+        Write-Host ("Build Log    : {0}" -f $buildLog)
+
+    }
+
+    Write-Host ""
+    Write-Host "BUILD SUCCESSFUL" -ForegroundColor Green
+    Write-Host "================================================="
+
+    $buildSucceeded = $true
+
 }
+catch {
 
-$gitBranch = git branch --show-current 2>$null
+    Write-Host ""
+    Write-Host "========== BUILD FAILED ==========" -ForegroundColor Red
 
-if (-not $gitBranch) {
-    $gitBranch = "Unknown"
+    Write-Host "Message:" -ForegroundColor Yellow
+    Write-Host $_.Exception.Message
+
+    Write-Host ""
+    Write-Host "Exception Type:" -ForegroundColor Yellow
+    Write-Host $_.Exception.GetType().FullName
+
+    Write-Host ""
+    Write-Host "Invocation:" -ForegroundColor Yellow
+    $_.InvocationInfo.PositionMessage
+
+    Write-Host ""
+    Write-Host "Stack:" -ForegroundColor Yellow
+    Write-Host $_.ScriptStackTrace
+
+    throw
+
 }
+finally {
 
-$zip = Join-Path `
-    "$PSScriptRoot\release" `
-    ("Monk.Platform-{0}.zip" -f $versionString)
+    if ($buildLog) {
 
-$packageSize = "Unknown"
+        try {
 
-if(Test-Path $zip){
+            Stop-MonkReleaseLog | Out-Null
 
-    $packageSize = "{0:N2} MB" -f (
-        (Get-Item $zip).Length / 1MB
-    )
+        }
+        catch {
+        }
+
+    }
+
+    if ($buildSucceeded) {
+
+        Exit-MonkSuccess
+
+    }
+    else {
+
+        throw "Build failed."
+
+    }
 
 }
-
-$elapsed = (Get-Date) - $buildStart
-
-Write-Host ""
-Write-Host "================================================="
-Write-Host "                BUILD SUMMARY"
-Write-Host "================================================="
-Write-Host ""
-
-Write-Host ("Version      : {0}" -f $versionString)
-Write-Host ("Build        : {0}" -f $version.Build)
-Write-Host ("Branch       : {0}" -f $gitBranch)
-Write-Host ("Commit       : {0}" -f $gitCommit)
-Write-Host ("PowerShell   : {0}" -f $PSVersionTable.PSVersion)
-Write-Host ("Platform     : {0}" -f [System.Environment]::OSVersion.VersionString)
-
-Write-Host ""
-
-Write-Host ("Package      : Monk.Platform-{0}.zip" -f $versionString)
-Write-Host ("Package Size : {0}" -f $packageSize)
-
-Write-Host ""
-
-Write-Host ("Build Time   : {0:N2} sec" -f $elapsed.TotalSeconds)
-
-Write-Host ""
-Write-Host "BUILD SUCCESSFUL" -ForegroundColor Green
-Write-Host "================================================="

@@ -284,3 +284,137 @@
 [2026-07-14 22:24:56] [INFO] Plugin loaded: demo
 [2026-07-14 22:24:59] [INFO] Plugin loaded: demo
 [2026-07-14 22:25:03] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:02] [INFO] Creating backup: 2026-07-14_232002
+[2026-07-14 23:20:02] [SUCCESS] Backup : Backup completed successfully.
+[2026-07-14 23:20:03] [INFO] EVENT BackupCompleted
+[2026-07-14 23:20:05] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:05] [INFO] EVENT PlatformUpdated
+[2026-07-14 23:20:05] [INFO] Demo plugin received PlatformUpdated
+[2026-07-14 23:20:06] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:06] [INFO] ========== Starting Monk AI Platform ==========
+[2026-07-14 23:20:06] [INFO] qdrant already running
+[2026-07-14 23:20:07] [INFO] neo4j already running
+[2026-07-14 23:20:07] [INFO] postgres already running
+[2026-07-14 23:20:08] [INFO] supabase already running
+[2026-07-14 23:20:08] [INFO] langfuse already running
+[2026-07-14 23:20:09] [INFO] redis already running
+[2026-07-14 23:20:09] [SUCCESS] Platform startup completed.
+[2026-07-14 23:20:09] [INFO] Running health check
+[2026-07-14 23:20:13] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:16] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:17] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:18] [INFO] Running health check
+[2026-07-14 23:20:27] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:28] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:30] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:32] [INFO] Plugin loaded: demo
+[2026-07-14 23:20:36] [INFO] Plugin loaded: demo
+[2026-07-14 23:21:53] [INFO] Creating backup: 2026-07-14_232153
+[2026-07-14 23:21:53] [SUCCESS] Backup : Backup completed successfully.
+[2026-07-14 23:21:53] [INFO] EVENT BackupCompleted
+[2026-07-14 23:21:56] [INFO] Plugin loaded: demo
+[2026-07-14 23:21:56] [INFO] EVENT PlatformUpdated
+[2026-07-14 23:21:56] [INFO] Demo plugin received PlatformUpdated
+[2026-07-14 23:21:57] [INFO] Plugin loaded: demo
+[2026-07-14 23:21:57] [INFO] ========== Starting Monk AI Platform ==========
+[2026-07-14 23:21:58] [INFO] qdrant already running
+[2026-07-14 23:21:58] [INFO] neo4j already running
+[2026-07-14 23:21:58] [INFO] postgres already running
+[2026-07-14 23:21:59] [INFO] supabase already running
+[2026-07-14 23:21:59] [INFO] langfuse already running
+[2026-07-14 23:21:59] [INFO] redis already running
+[2026-07-14 23:21:59] [SUCCESS] Platform startup completed.
+[2026-07-14 23:21:59] [INFO] Running health check
+[2026-07-14 23:22:02] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:12] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:15] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:15] [INFO] Running health check
+[2026-07-14 23:22:28] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:29] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:29] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:30] [INFO] Plugin loaded: demo
+[2026-07-14 23:22:32] [INFO] Plugin loaded: demo
+[2026-07-14 23:43:34] [INFO] Creating backup: 2026-07-14_234334
+[2026-07-14 23:43:38] [SUCCESS] Backup : Backup completed successfully.
+[2026-07-14 23:43:38] [INFO] EVENT BackupCompleted
+[2026-07-14 23:43:50] [INFO] Plugin loaded: demo
+[2026-07-14 23:43:50] [INFO] EVENT PlatformUpdated
+[2026-07-14 23:43:50] [INFO] Demo plugin received PlatformUpdated
+[2026-07-14 23:43:56] [INFO] Plugin loaded: demo
+[2026-07-14 23:43:56] [INFO] ========== Starting Monk AI Platform ==========
+[2026-07-14 23:44:03] [INFO] qdrant already running
+[2026-07-14 23:44:05] [INFO] neo4j already running
+[2026-07-14 23:44:09] [INFO] postgres already running
+[2026-07-14 23:44:12] [INFO] supabase already running
+[2026-07-14 23:44:13] [INFO] langfuse already running
+[2026-07-14 23:44:16] [INFO] redis already running
+[2026-07-14 23:44:16] [SUCCESS] Platform startup completed.
+[2026-07-14 23:44:16] [INFO] Running health check
+[2026-07-14 23:44:52] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:00] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:08] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:09] [INFO] Running health check
+[2026-07-14 23:45:38] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:44] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:49] [INFO] Plugin loaded: demo
+[2026-07-14 23:45:53] [INFO] Plugin loaded: demo
+[2026-07-14 23:46:00] [INFO] Plugin loaded: demo
+[2026-07-14 23:53:18] [INFO] Creating backup: 2026-07-14_235318
+[2026-07-14 23:53:18] [SUCCESS] Backup : Backup completed successfully.
+[2026-07-14 23:53:19] [INFO] EVENT BackupCompleted
+[2026-07-14 23:53:26] [INFO] Plugin loaded: demo
+[2026-07-14 23:53:26] [INFO] EVENT PlatformUpdated
+[2026-07-14 23:53:26] [INFO] Demo plugin received PlatformUpdated
+[2026-07-14 23:53:37] [INFO] Plugin loaded: demo
+[2026-07-14 23:53:37] [INFO] ========== Starting Monk AI Platform ==========
+[2026-07-14 23:53:38] [INFO] qdrant already running
+[2026-07-14 23:53:39] [INFO] neo4j already running
+[2026-07-14 23:53:40] [INFO] postgres already running
+[2026-07-14 23:53:40] [INFO] supabase already running
+[2026-07-14 23:53:41] [INFO] langfuse already running
+[2026-07-14 23:53:42] [INFO] redis already running
+[2026-07-14 23:53:42] [SUCCESS] Platform startup completed.
+[2026-07-14 23:53:42] [INFO] Running health check
+[2026-07-14 23:54:08] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:09] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:10] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:10] [INFO] Running health check
+[2026-07-14 23:54:20] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:22] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:24] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:25] [INFO] Plugin loaded: demo
+[2026-07-14 23:54:26] [INFO] Plugin loaded: demo
+[2026-07-15 00:24:10] [INFO] Plugin loaded: demo
+[2026-07-15 00:26:02] [INFO] Plugin loaded: demo
+[2026-07-15 00:26:18] [ERROR] FAILED: Failure Test - Boom
+[2026-07-15 00:29:01] [INFO] Plugin loaded: demo
+[2026-07-15 00:35:13] [INFO] Plugin loaded: demo
+[2026-07-15 01:55:44] [INFO] Plugin loaded: demo
+[2026-07-15 02:03:08] [INFO] Plugin loaded: demo
+[2026-07-15 02:14:34] [INFO] Plugin loaded: demo
+[2026-07-15 02:39:20] [INFO] Plugin loaded: demo
+[2026-07-15 02:47:41] [INFO] Creating backup: 2026-07-15_024741
+[2026-07-15 02:47:42] [SUCCESS] Backup : Backup completed successfully.
+[2026-07-15 02:47:42] [INFO] EVENT BackupCompleted
+[2026-07-15 02:47:52] [INFO] Plugin loaded: demo
+[2026-07-15 02:47:54] [INFO] EVENT PlatformUpdated
+[2026-07-15 02:47:54] [INFO] Demo plugin received PlatformUpdated
+[2026-07-15 02:47:58] [INFO] Plugin loaded: demo
+[2026-07-15 02:47:58] [INFO] ========== Starting Monk AI Platform ==========
+[2026-07-15 02:48:00] [INFO] qdrant already running
+[2026-07-15 02:48:01] [INFO] neo4j already running
+[2026-07-15 02:48:02] [INFO] postgres already running
+[2026-07-15 02:48:07] [INFO] supabase already running
+[2026-07-15 02:48:10] [INFO] langfuse already running
+[2026-07-15 02:48:12] [INFO] redis already running
+[2026-07-15 02:48:12] [SUCCESS] Platform startup completed.
+[2026-07-15 02:48:12] [INFO] Running health check
+[2026-07-15 02:48:28] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:29] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:31] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:31] [INFO] Running health check
+[2026-07-15 02:48:46] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:48] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:52] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:54] [INFO] Plugin loaded: demo
+[2026-07-15 02:48:57] [INFO] Plugin loaded: demo

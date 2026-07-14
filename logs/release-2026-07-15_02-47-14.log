@@ -1,0 +1,246 @@
+**********************
+PowerShell transcript start
+Start time: 20260715024714
+Username: RISHI\admin
+RunAs User: RISHI\admin
+Configuration Name: 
+Machine: RISHI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.3.0_x64__8wekyb3d8bbwe\pwsh.dll
+Process ID: 17316
+PSVersion: 7.6.3
+PSEdition: Core
+GitCommitId: 7.6.3
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+=================================================
+         MONK PLATFORM BUILD SYSTEM
+=================================================
+
+[1/5] Clean
+
+========== CLEAN ==========
+
+
+Clean completed.
+
+[2/5] Validate Manifest
+✓ Manifest
+
+[3/5] Script Analyzer
+✓ Analyzer
+
+[4/5] Tests
+Pester v6.0.0
+
+Running tests from 14 files.
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Backup.Tests.ps1'
+Describing Backup Integration
+[INFO ] Creating backup: 2026-07-15_024741
+[ OK  ] Backup : Backup completed successfully.
+[INFO ] EVENT BackupCompleted
+  [+] Creates backup successfully
+ 1.85s
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Integration\EventBus.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Event Bus
+[INFO ] EVENT PlatformUpdated
+[INFO ] Demo plugin received PlatformUpdated
+  [+] Publishes events without throwing
+ 1.86s
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Platform.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Platform Integration
+[INFO ] ========== Starting Monk AI Platform ==========
+[INFO ] qdrant already running
+[INFO ] neo4j already running
+[INFO ] postgres already running
+[INFO ] supabase already running
+[INFO ] langfuse already running
+[INFO ] redis already running
+[ OK  ] Platform startup completed.
+  [+] Starts platform successfully
+ 14.11s
+[INFO ] Running health check
+  [+] Returns healthy status
+ 9.77s
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Integration\PluginSystem.Tests.ps1'
+Describing Plugin Integration
+  [+] Loads demo plugin
+ 260ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Integration\Scheduler.Tests.ps1'
+Describing Scheduler Integration
+  [+] Scheduler commands exist
+ 1.03s
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Backup.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Backup Engine
+  [+] Lists backups
+ 49ms
+  [+] Backup command exists
+ 13ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Config.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Configuration
+  [+] Returns configuration object
+ 64ms
+  [+] Configuration has Root
+ 52ms
+  [+] Configuration has Logs folder
+ 73ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Health.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Health Engine
+[INFO ] Running health check
+  [+] Returns health object
+ 1.4s
+  [+] Returns system health
+ 9.44s
+  [+] CPU property exists
+ 2.31s
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Module.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Module Loading
+  [+] Imports successfully
+ 39ms
+  [+] Exports public commands
+ 87ms
+  [+] Exports Start-MonkPlatform
+ 50ms
+  [+] Exports Repair-MonkPlatform
+ 62ms
+  [+] Exports Backup-MonkPlatform
+ 36ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Plugins.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Plugin System
+  [+] Returns installed plugins
+ 22ms
+  [+] Plugin command exists
+ 82ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Repair.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Repair Engine
+  [+] Repair function exists
+ 16ms
+  [+] Repair service exists
+ 93ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Services.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Service Registry
+  [+] Returns services
+ 53ms
+  [+] Contains qdrant
+ 52ms
+  [+] Returns running status
+ 468ms
+
+Running tests from 'C:\AI-Platform\Monk-Platform-Manager\tests\Unit\Update.Tests.ps1'
+[INFO ] Plugin loaded: demo
+WARNING: The names of some imported commands from the module 'Monk.Platform' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+Describing Update Engine
+  [+] Update command exists
+ 41ms
+Tests completed in 80.64s
+Tests Passed: 27, 
+Failed: 0, 
+Skipped: 0, 
+Inconclusive: 0, 
+NotRun: 0
+✓ Tests
+
+[5/5] Package
+
+========================================
+      MONK PLATFORM PACKAGER
+========================================
+
+✓ Copied modules
+✓ Copied docs
+✓ Copied configs
+✓ Copied templates
+✓ Copied README.md
+✓ Copied LICENSE
+✓ BUILD_INFO.json generated
+
+Package created:
+C:\AI-Platform\Monk-Platform-Manager\release\Monk.Platform-1.0.1
+✓ ZIP package created
+
+ZIP:
+C:\AI-Platform\Monk-Platform-Manager\release\Monk.Platform-1.0.1.zip
+
+Verifying package...
+✓ modules
+✓ README.md
+
+Package integrity verified.
+
+========================================
+          PACKAGE SUMMARY
+========================================
+
+Version      : 1.0.1
+Build        : 1
+Branch       : master
+Commit       : 51fc354
+Package      : Monk.Platform-1.0.1.zip
+Output       : C:\AI-Platform\Monk-Platform-Manager\release\Monk.Platform-1.0.1
+ZIP Size     : 0.02 MB
+Log File     : C:\AI-Platform\Monk-Platform-Manager\logs\release-2026-07-15_02-48-59.log
+
+PACKAGE CREATED SUCCESSFULLY
+========================================
+[ OK  ] Operation completed successfully.
+✓ Package
+
+=================================================
+                BUILD SUMMARY
+=================================================
+
+Version      : 1.0.1
+Build        : 1
+Branch       : master
+Commit       : 51fc354
+PowerShell   : 7.6.3
+Platform     : Microsoft Windows NT 10.0.26200.0
+
+Package      : Monk.Platform-1.0.1.zip
+Package Size : 0.02 MB
+
+Build Time   : 109.18 sec
+
+Build Log    : C:\AI-Platform\Monk-Platform-Manager\logs\release-2026-07-15_02-47-14.log
+
+BUILD SUCCESSFUL
+=================================================
+**********************
+PowerShell transcript end
+End time: 20260715024904
+**********************

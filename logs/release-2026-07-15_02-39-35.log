@@ -1,0 +1,48 @@
+**********************
+PowerShell transcript start
+Start time: 20260715023935
+Username: RISHI\admin
+RunAs User: RISHI\admin
+Configuration Name: 
+Machine: RISHI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.3.0_x64__8wekyb3d8bbwe\pwsh.dll
+Process ID: 17316
+PSVersion: 7.6.3
+PSEdition: Core
+GitCommitId: 7.6.3
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+=================================================
+         MONK PLATFORM BUILD SYSTEM
+=================================================
+
+[1/5] Clean
+
+========== CLEAN ==========
+
+✓ Removed release
+✓ Removed tests\TestResults.xml
+
+Clean completed.
+
+[2/5] Validate Manifest
+✓ Manifest
+
+[3/5] Script Analyzer
+PS>TerminatingError(Invoke-ScriptAnalyzer): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Object reference not set to an instance of an object."
+
+========== BUILD FAILED ==========
+Object reference not set to an instance of an object.
+
+at <ScriptBlock>, C:\AI-Platform\Monk-Platform-Manager\build.ps1: line 66
+at <ScriptBlock>, <No file>: line 1
+**********************
+PowerShell transcript end
+End time: 20260715023947
+**********************

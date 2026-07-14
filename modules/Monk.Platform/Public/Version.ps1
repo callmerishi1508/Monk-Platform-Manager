@@ -3,14 +3,11 @@ function Get-MonkVersion {
     [CmdletBinding()]
     param()
 
-    $versionFile = Join-Path (Get-MonkRoot) "version.json"
-
-    $version = Get-Content $versionFile |
-        ConvertFrom-Json
+    $version = Get-MonkVersionInfo
 
     "{0}.{1}.{2}" -f `
-        $version.Major, `
-        $version.Minor, `
+        $version.Major,
+        $version.Minor,
         $version.Patch
 
 }
